@@ -1,0 +1,111 @@
+1. Basic Linux commands with full forms :
+
+Command				Full form / meaning						Work and example
+pwd		Print Working Directory							Shows your current location. pwd
+ls		List (historically, list directory contents)				Lists files. ls -l
+cd		Change Directory							Changes directory. cd Documents
+mkdir		Make Directory								Creates a folder. mkdir project
+rmdir		Remove Directory							Removes an empty folder. rmdir project
+rm		Remove									Deletes files. rm file.txt
+cp		Copy									Copies files. cp a.txt b.txt
+mv		Move									Moves or renames files. mv old.txt new.txt
+cat		Concatenate								Displays or combines file contents. cat file.txt
+touch		No official full form							Creates an empty file or updates its timestamp. touch file.txt
+clear		Ordinary English word							Clears the terminal screen. clear
+echo		Ordinary English word							Prints text or variable values. echo "Hello"
+man		Manual									Displays command documentation. man ls
+whoami		Who am I?								Displays your current username. whoami
+uname		Unix Name								Displays system information. uname -a
+hostname	Host Name								Displays the machine's hostname. hostname
+date		Ordinary English word							Displays date and time. date
+history		Ordinary English word							Displays previously entered commands. history
+
+
+
+2. File viewing and searching commands :
+
+Command				Full form / meaning						Work and example
+less		Not an official acronym							Views a file page by page. less file.txt
+more		Ordinary English word							Displays file contents one screen at a time. more file.txt
+head		Ordinary English word							Displays the beginning of a file. head file.txt
+tail		Ordinary English word							Displays the end of a file. tail file.txt
+grep		Global Regular Expression Print						Searches text for matching patterns. grep "error" app.log
+find		Ordinary English word							Searches for files and directories. find . -name "*.txt"
+locate		Ordinary English word							Searches a filename database, if installed. locate file.txt
+wc		Word Count								Counts lines, words, and bytes. wc file.txt
+sort		Ordinary English word							Sorts lines of text. sort names.txt
+uniq		Unique									Removes adjacent duplicate lines. sort names.txt \| uniq
+diff		Difference								Compares files. diff a.txt b.txt
+sed		Stream Editor								Processes and transforms text. sed 's/old/new/g' file.txt
+awk		Named after its creators' surnames (Aho, Weinberger, Kernighan)		Processes structured text. awk '{print $1}' file.txt
+cut		Ordinary English word							Extracts selected fields or characters. cut -d: -f1 /etc/passwd
+
+
+
+3. Permissions and user management :
+
+Command				Full form / meaning						Work and example
+chmod		Change Mode								Changes file permissions. chmod 755 script.sh
+chown		Change Owner								Changes file ownership. sudo chown user file.txt
+chgrp		Change Group								Changes a file's group ownership. sudo chgrp developers file.txt
+sudo		Commonly expanded as "Superuser Do"					Runs a command with elevated privileges when authorized. sudo apt update
+su		Switch User								Switches to another user account. su - username
+useradd		User Add								Creates a user account. sudo useradd -m arib
+usermod		User Modify								Modifies a user account. sudo usermod -aG sudo arib
+userdel		User Delete								Deletes a user account. sudo userdel arib
+passwd		Password								Sets or changes a user's password. passwd
+id		Identity								Displays user and group IDs. id
+groups		Ordinary English word							Displays group memberships. groups
+who		Ordinary English word							Shows logged-in users. who
+
+tip: chmod changes permissions; chown changes ownership. These are different operations.
+
+
+
+4. Package management commands in Ubuntu :
+
+Command				Full form / meaning						Work and example
+apt			Advanced Package Tool						Installs and manages software packages. sudo apt install git
+dpkg			Debian Package							Manages Debian-format software packages. dpkg -l
+snap			Not an official acronym						Installs and manages Snap packages. snap list
+sudo apt update		Update package lists						Refreshes information about available packages.
+sudo apt upgrade	Upgrade packages						Upgrades installed packages.
+apt search		Search packages							Searches available package information. apt search nginx
+apt show		Show package details						Displays package information. apt show git
+
+
+
+5. Process and service management :
+
+Command				Full form / meaning						Work and example
+ps			Process Status							Displays information about running processes. ps aux
+top			Not an official acronym						Displays processes and resource usage interactively. top
+kill			Ordinary English word						Sends a signal to a process. kill 1234
+pgrep			Process Grep							Finds process IDs matching a pattern. pgrep nginx
+pkill			Process Kill							Sends signals to processes matching a pattern. pkill nginx
+bg			Background							Resumes a stopped job in the background. bg
+fg			Foreground							Brings a shell job to the foreground. fg
+jobs			Ordinary English word						Lists jobs in the current shell. jobs
+nice			Not an acronym							Starts a process with a selected scheduling priority. nice -n 10 command
+df			Disk Free							Displays filesystem disk space. df -h
+du			Disk Usage							Displays file or directory space usage. du -sh project/
+free			Ordinary English word						Displays memory and swap usage. free -h
+systemctl		System Control							Manages systemd services and units. systemctl status ssh
+journalctl		Journal Control							Reads the systemd journal. journalctl -u ssh
+
+
+
+6. Git commands for GitHub :
+
+Command				Full form / meaning						Work and example
+git			The name is not an official acronym; 				Version control system. git --version
+			the creator described it as a short, meaningless name		
+init			Initialize							Creates a new local repository. git init
+clone			Clone								Copies a remote repository locally. git clone URL
+add			Add								Stages changes. git add .
+commit			Commit								Records staged changes. git commit -m "Initial commit"
+push			Push								Uploads commits to a remote. git push
+pull			Pull								Fetches and integrates remote changes. git pull
+log			Log								Displays commit history. git log --oneline
+status			Status								Shows the state of the working tree and staging area. git status
+remote			Remote repository configuration					Lists or manages remote repositories. git remote -v
